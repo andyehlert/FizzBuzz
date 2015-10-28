@@ -57,11 +57,11 @@ def fizzbuzz_range (b, e, w = sys.stdout) :
         v = fizzbuzz_single(n)
         fizzbuzz_print(w, v)
 
-# ---------------
-# fizzbuzz_static
-# ---------------
+# ----------------
+# fizzbuzz_default
+# ----------------
 
-def fizzbuzz_static (w = sys.stdout) :
+def fizzbuzz_default (w = sys.stdout) :
     """
     w the number to be evaluated
     return a string containing the proper print value
