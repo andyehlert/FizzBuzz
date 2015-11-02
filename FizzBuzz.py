@@ -61,7 +61,7 @@ def fizzbuzz_single (n) :
         result.write("Buzz")
     # If result is still empty, append the number to the string.
     if (result.getvalue() == "") :
-        result.write(str(n))
+        return str(n)
     # Return the string value of the output stream.
     return result.getvalue()
 
