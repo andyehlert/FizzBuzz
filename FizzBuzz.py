@@ -5,7 +5,13 @@
 # Scott A. Ehlert
 # ---------------
 
+# -------
+# imports
+# -------
+
 import sys
+from io       import StringIO
+
 
 # --------------
 # fizzbuzz_print
@@ -45,18 +51,19 @@ def fizzbuzz_single (n) :
     n the number to be evaluated
     return a string containing the proper print value
     """
-    assert n > 0 
-    # Check if the number is dividible by 3.
-    if (n % 3 == 0 and n % 5 == 0) :
-        return "FizzBuzz"
+    # Initialize an IO stream for accumulating output.
+    result = StringIO("")
     # Check if the number is dividible by 3.
     if (n % 3 == 0) :
-        return "Fizz"
+        result.write("Fizz")
     # Check if the number is dividible by 5.
     if (n % 5 == 0) :
-        return "Buzz"
-    # If no other branches were taken, return the number as a string.
-    return str(n)
+        result.write("Buzz")
+    # If result is still empty, append the number to the string.
+    if (result.getvalue() == "") :
+        result.write(str(n))
+    # Return the string value of the output stream.
+    return result.getvalue()
 
 # --------------
 # fizzbuzz_range

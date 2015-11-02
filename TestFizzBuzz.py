@@ -136,9 +136,9 @@ class TestFizzBuzz (TestCase) :
 
     def test_custom_5 (self) :
         w = StringIO()
-        fizzbuzz_custom(1000, 2000, w)
-        # self.assertEqual(w.getvalue(), 160)
-        self.assertEqual(1, 1)
+        fizzbuzz_custom(101, 150, w)
+        self.assertEqual(w.getvalue(), "101\nFizz\n103\n104\nFizzBuzz\n106\n107\nFizz\n109\nBuzz\nFizz\n112\n113\nFizz\nBuzz\n116\nFizz\n118\n119\nFizzBuzz\n121\n122\nFizz\n124\nBuzz\nFizz\n127\n128\nFizz\nBuzz\n131\nFizz\n133\n134\nFizzBuzz\n136\n137\nFizz\n139\nBuzz\nFizz\n142\n143\nFizz\nBuzz\n146\nFizz\n148\n149\nFizzBuzz\n")
+        # self.assertEqual(1, 1)
 
 
     # -------
